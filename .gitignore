@@ -1,0 +1,56 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Testing
+/coverage/
+
+# Optional npm cache
+.npm
+
+# Yarn Integrity File
+.yarn-integrity
+
+# Jest test output
+jest-test-results.json
+
+# TypeScript error reports
+report.[0-9]*.json
+
+# PM2 Logs
+.pids
+*.pid
+*.pid.lock
+
+# Temporary files
+*.tmp
+*.temp
