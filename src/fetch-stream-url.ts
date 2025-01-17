@@ -25,7 +25,6 @@ const fetchStreamUrl = async (lessonId: number, headers: AuthHeaders): Promise<s
             "Referrer-Policy": "strict-origin-when-cross-origin",
         };
 
-        // Step 1: Fetch lecture details
         const lectureResponse = await axios.get(`https://yds.net/api/v1/lesson/lecture/${lessonId}`, {
             headers: {
                 ...commonHeaders,
@@ -39,7 +38,6 @@ const fetchStreamUrl = async (lessonId: number, headers: AuthHeaders): Promise<s
             throw new Error("Video ID not found in lecture details.");
         }
 
-        // Step 2: Fetch video public URL
         const videoDetails: VideoDetails = {
             provider_id: 1,
             account_id: 1,

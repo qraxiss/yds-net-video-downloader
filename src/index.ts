@@ -23,7 +23,6 @@ async function main() {
             }
 
             try {
-                // Extract lesson ID from the URL
                 const match = url.match(/\/([0-9]+)$/);
                 if (!match) {
                     throw new Error("Invalid lesson URL format.");
@@ -34,11 +33,9 @@ async function main() {
                     authorization: `Bearer ${token}`,
                 };
 
-                // Fetch stream URL
                 const streamUrl = await fetchStreamUrl(lessonId, authorizationHeader);
                 console.log("Stream URL:", streamUrl);
 
-                // Download the stream
                 await download(streamUrl);
                 console.log("Download completed successfully.");
             } catch (error: any) {
